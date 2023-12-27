@@ -1,0 +1,87 @@
+[tool.poetry]
+name = "nn-zero-to-hero"
+version = "0.0.0"
+description = "Neural Networks: Zero to Hero"
+authors = ["Robert Edwards"]
+readme = "README.md"
+include = ["LICENCE"]
+packages = [{ include = "" }]
+
+[tool.poetry.dependencies]
+python = ">3.11"
+torch = "^2.0.1"
+torchvision = "^0.15.2"
+jupyterlab = "^4.0.3"
+pyarrow = "^14.0.1"
+graphviz = "^0.20.1"
+tqdm = "^4.66.1"
+pandas = "^2.1.4"
+numpy = "^1.26.2"
+ipython = "^8.19.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.9"
+mypy = "^1.8.0"
+pytest = "^7.4.3"
+pylint = "^3.0.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+source = [""]
+
+[tool.mypy]
+exclude = ["^build/", "^tests/", "^docs/", "^ci/"]
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+
+    # The following are specific to Black, you probably don't want those.
+    | blib2to3
+    | tests/data
+)/
+'''
+
+[tool.isort]
+profile = "black"
+py_version = "311"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 120
+src_paths = ["", "./tests", "./notebooks"]
+skip_glob = ["ci/cache"]
+
+[tool.pylint.'MASTER']
+jobs = 0       # use all cores
+fail-under = 9
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+
+disable = [
+  "C0116", # missing-docstring
+]
+
+[tool.pylint.'MISCELLANEOUS']
+notes = [
+  "TODO",
+  "FIXME",
+  "XXX",
+]

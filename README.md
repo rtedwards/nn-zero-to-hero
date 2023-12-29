@@ -35,9 +35,9 @@ Different [layer types](https://en.wikipedia.org/wiki/Layer_(deep_learning)) per
 - Sigmoid
 - Softmax
 - Tanh
-- ReLu
+- ReLu ([Rectified Linear Units Improve Restricted Boltzmann Machines](https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf))
 - Leaky ReLu
-- Parametric ReLu
+- Parametric ReLu ([Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification](https://arxiv.org/abs/1502.01852))
 - ReLu6
 - Binary Step
 - Identity
@@ -53,7 +53,7 @@ Different [layer types](https://en.wikipedia.org/wiki/Layer_(deep_learning)) per
 - L2-norm (Squared)
 - L1-norm (Absolute)
 - Dropout
-- Batch Normalization
+- Batch Normalization ([Batch Normalization: Accelerating Deep Neural Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167))
 
 ## Pooling
 Pooling layers are methods for reducing high dimensionality. Pooling layers provide an approach for downsampling feature maps by summarizing the presence of features in patches of the feature map.

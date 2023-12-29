@@ -2,21 +2,19 @@
 Notes from Nerual Networks: Zero to Hero (https://www.youtube.com/watch?v=VMj-3S1tku0&amp;list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
 
 ## Neural Netowrk Architecture
-**insert image here of MLP**
-
 - Input Layer
 - Hidden Layers
-- Output Layer
-- Cost Functions
+- Output Layer (Activation Layer?)
 
 ### Neural Network Types
 - Feed Forward Networks (vanilla nerual network)
+- Multi-Layer Perceptron (MLP)
 - Convolutional Neural Networks (CNN)
 - Recurrent Neural Networks (RNN)
-- Multi-Layer Perceptron (MLP)
 - Long Short-Term Memory Networks (LSTM)
 - Radial Based Networks
 - Generative Adversarial Networks (GAN)
+- Transformers
 
 ### Hidden Layers
 
@@ -36,7 +34,15 @@ Different [layer types](https://en.wikipedia.org/wiki/Layer_(deep_learning)) per
 [Activation Functions](https://en.wikipedia.org/wiki/Activation_function)
 - Sigmoid
 - Softmax
+- Tanh
 - ReLu
+- Leaky ReLu
+- Parametric ReLu
+- ReLu6
+- Binary Step
+- Identity
+- Swish
+- Hard Swish
 - Flatten
 
 ### Loss Functions (Cost Functions)
@@ -47,8 +53,17 @@ Different [layer types](https://en.wikipedia.org/wiki/Layer_(deep_learning)) per
 - L2-norm (Squared)
 - L1-norm (Absolute)
 - Dropout
+- Batch Normalization
 
 ## Pooling
 Pooling layers are methods for reducing high dimensionality. Pooling layers provide an approach for downsampling feature maps by summarizing the presence of features in patches of the feature map.
 - Max Pooling
 - Average Pooling
+
+## Concepts
+- Vanishing gradients
+- Dead neurons
+  
+## Debugging
+- Vanishing gradients
+- Dead neurons
